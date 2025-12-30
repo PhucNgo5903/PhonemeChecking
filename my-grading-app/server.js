@@ -11,6 +11,11 @@ const OpenAI = require("openai");
 const app = express();
 const upload = multer({ dest: 'uploads/' }); // Thư mục tạm chứa file upload
 
+const allowedOrigins = [
+  "http://localhost:5173", 
+  "https://phoneme-checking.vercel.app", // THÊM LINK VERCEL FRONTEND CỦA BẠN
+];
+
 app.use(cors());
 app.use(express.json());
 
